@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#111827">
+<title>Барвінкове — повітряна безпека</title>
+<style>
+:root{color-scheme:dark;--bg:#0b1120;--panel:#151e30;--line:#2a3850;--text:#edf3ff;--muted:#a9b7ce;--accent:#78a9ff}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(160deg,#111b30,#080d17 65%);color:var(--text);font:16px/1.5 system-ui,-apple-system,Segoe UI,Arial,sans-serif}
+main{max-width:1050px;margin:auto;padding:22px 16px 44px}.head{display:flex;gap:14px;align-items:center;margin-bottom:18px}.symbol{font-size:30px}.eyebrow{color:#9fb4d4;font-size:12px;text-transform:uppercase;letter-spacing:.12em}h1{font-size:clamp(25px,5vw,38px);line-height:1.15;margin:3px 0 6px}p{margin:6px 0;color:var(--muted)}.alert{border:1px solid #805a2b;background:#382817;border-radius:14px;padding:14px 16px;margin:18px 0}.alert strong{color:#ffd28b}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:16px 0 22px}.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px}.card h2{font-size:17px;margin:0 0 6px}.card p{font-size:14px;min-height:42px}.link{display:inline-block;color:#dce9ff;text-decoration:none;font-weight:650;border:1px solid #405777;border-radius:9px;padding:9px 12px;margin-top:7px}.link:hover{background:#243754}.maphead{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin:20px 0 10px}.maphead h2{margin:0;font-size:22px}.mapbox{background:#151e30;border:1px solid var(--line);border-radius:14px;padding:10px}.mapbox iframe{display:block;width:100%;height:min(72vh,700px);min-height:430px;border:0;border-radius:9px;background:#fff}.small{font-size:12px;color:#9babc3}.footer{border-top:1px solid var(--line);margin-top:22px;padding-top:15px}.pill{display:inline-block;background:#233149;border-radius:99px;padding:4px 9px;color:#d2e2ff;font-size:12px}@media(max-width:520px){main{padding:16px 11px 30px}.mapbox{padding:5px}.mapbox iframe{min-height:390px}}
+</style>
+</head>
+<body><main>
+<header class="head"><div class="symbol" aria-hidden="true">🛡️</div><div><div class="eyebrow">Інформаційна панель</div><h1>Барвінкове — повітряна безпека</h1><p>Одна сторінка для швидкої перевірки офіційних попереджень і повідомлень.</p></div></header>
+<div class="alert"><strong>Важливо:</strong> це інформаційний агрегатор, а не система оповіщення. У разі сигналу тривоги негайно дотримуйтеся офіційних вказівок і прямуйте в укриття. Не покладайтеся лише на цю сторінку.</div>
+<section class="grid" aria-label="Джерела">
+<article class="card"><h2>🗺️ Офіційна карта тривог</h2><p>Перевіряйте актуальний статус тривог на карті України.</p><a class="link" href="https://map.ukrainealarm.com/" target="_blank" rel="noopener">Відкрити карту ↗</a></article>
+<article class="card"><h2>📍 alerts.in.ua</h2><p>Альтернативна карта та інформація про повітряні тривоги з офіційних джерел.</p><a class="link" href="https://alerts.in.ua/" target="_blank" rel="noopener">Відкрити alerts.in.ua ↗</a></article>
+<article class="card"><h2>📣 Харківська ОВА</h2><p>Офіційні повідомлення обласної військової адміністрації.</p><a class="link" href="https://kharkivoda.gov.ua/" target="_blank" rel="noopener">Сайт ОВА ↗</a></article>
+<article class="card"><h2>🚒 ДСНС України</h2><p>Офіційні повідомлення про надзвичайні ситуації та правила безпеки.</p><a class="link" href="https://dsns.gov.ua/" target="_blank" rel="noopener">Сайт ДСНС ↗</a></article>
+</section>
+<div class="maphead"><h2>Карта в цьому вікні</h2><span class="pill">Дані надає зовнішній сервіс</span></div>
+<div class="mapbox"><iframe src="https://map.ukrainealarm.com/" title="Офіційна карта повітряних тривог України" loading="lazy" referrerpolicy="no-referrer"></iframe><p class="small">Якщо карта не відображається всередині сторінки, відкрийте її окремо кнопкою вище. Вбудовування залежить від налаштувань стороннього сайту.</p></div>
+<div class="footer"><p><strong>Про дані.</strong> Ця сторінка не відстежує рух ракет, дронів чи авіації та не прогнозує напрямки ударів. Вона збирає посилання на публічні джерела. Інформація може оновлюватися із затримкою.</p><p class="small">Оновлено код сторінки: <span id="stamp"></span> · Автооновлення вкладки кожні 10 хвилин.</p></div>
+</main>
+<script>
+document.getElementById('stamp').textContent=new Date().toLocaleString('uk-UA');
+setTimeout(()=>location.reload(),600000);
+</script>
+</body></html>
